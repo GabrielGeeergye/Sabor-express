@@ -13,7 +13,7 @@ print('4. Sair')
 
 #Criando uma variavel
 #Nele não é necessário colocar o tipo da variavel
-opcao_escolhida = input('Escolha uma opção: ')
+opcao_escolhida = int(input('Escolha uma opção: '))
 
 # Diferença do "" e '', defini uma para o projeto
 # É do time, e não de algo diferente
@@ -21,11 +21,14 @@ opcao_escolhida = input('Escolha uma opção: ')
 # Interpolação está abaixo
 print(f'Você escolheu a opção:{opcao_escolhida}')
 
-if opcao_escolhida == '1':
+#Retornar tipo da var
+#print(type(opcao_escolhida))
+
+if opcao_escolhida == 1:
     print('Cadastrar Restaurante')
-elif opcao_escolhida == '2':
+elif opcao_escolhida == 2:
     print('Listar Restaurante')
-elif opcao_escolhida == '3':
+elif opcao_escolhida == 3:
     print('Ativar restaurante')
 else:
     print('Encerrar programa')
