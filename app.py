@@ -1,6 +1,6 @@
 import os
 
-restaurantes = []
+restaurantes = ['Pizza','Bolo','Pudim']
 
 def exibir_titulo():
     print("Sabor express\n")
@@ -28,6 +28,17 @@ def  cadastrar_novo_restaurante():
     input('Digite uma tecla para voltar para o menu principal...')
     main()
 
+def listar_restaurante():
+    os.system('cls')
+    print('Listando restaurantes \n')
+
+    for restaurante in restaurantes:
+        print(f'.{restaurante}')
+
+    input('Digite uma tecla para voltar para o menu principal...')
+    main()
+
+
 def escolher_opcao():
 
     try:
@@ -37,7 +48,7 @@ def escolher_opcao():
             cadastrar_novo_restaurante()
 
         elif opcao_escolhida == 2:
-            print('Listar Restaurante')
+           listar_restaurante()
 
         elif opcao_escolhida == 3:
             print('Ativar restaurante')
