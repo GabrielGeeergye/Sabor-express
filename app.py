@@ -1,4 +1,7 @@
-print("""
+import os
+
+def exibir_titulo():
+    print("""
 ░██████╗░█████╗░██████╗░░█████╗░██████╗░  ███████╗██╗░░██╗██████╗░██████╗░███████╗░██████╗░██████╗
 ██╔════╝██╔══██╗██╔══██╗██╔══██╗██╔══██╗  ██╔════╝╚██╗██╔╝██╔══██╗██╔══██╗██╔════╝██╔════╝██╔════╝
 ╚█████╗░███████║██████╦╝██║░░██║██████╔╝  █████╗░░░╚███╔╝░██████╔╝██████╔╝█████╗░░╚█████╗░╚█████╗░
@@ -6,29 +9,50 @@ print("""
 ██████╔╝██║░░██║██████╦╝╚█████╔╝██║░░██║  ███████╗██╔╝╚██╗██║░░░░░██║░░██║███████╗██████╔╝██████╔╝
 ╚═════╝░╚═╝░░╚═╝╚═════╝░░╚════╝░╚═╝░░╚═╝  ╚══════╝╚═╝░░╚═╝╚═╝░░░░░╚═╝░░╚═╝╚══════╝╚═════╝░╚═════╝░\n""")
 
-print('1. Cadastrar restaurante')
-print('2. Listar restaurante')
-print('3. Ativar restaurante')
-print('4. Sair')
+def exibir_opcoes():
+    print('1. Cadastrar restaurante')
+    print('2. Listar restaurante')
+    print('3. Ativar restaurante')
+    print('4. Sair')
 
-#Criando uma variavel
-#Nele não é necessário colocar o tipo da variavel
-opcao_escolhida = int(input('Escolha uma opção: '))
+def finalizar_program():
+    os.system('cls')
+    print('\n Finalizar programa... \n')
 
-# Diferença do "" e '', defini uma para o projeto
-# É do time, e não de algo diferente
+def escolher_opcao():
+    #Criando uma variavel
+    #Nele não é necessário colocar o tipo da variavel
+    opcao_escolhida = int(input('Escolha uma opção: '))
 
-# Interpolação está abaixo
-print(f'Você escolheu a opção:{opcao_escolhida}')
+    # Diferença do "" e '', defini uma para o projeto
+    # É do time, e não de algo diferente
 
-#Retornar tipo da var
-#print(type(opcao_escolhida))
+    # Interpolação está abaixo
+    print(f'Você escolheu a opção:{opcao_escolhida}')
 
-if opcao_escolhida == 1:
-    print('Cadastrar Restaurante')
-elif opcao_escolhida == 2:
-    print('Listar Restaurante')
-elif opcao_escolhida == 3:
-    print('Ativar restaurante')
-else:
-    print('Encerrar programa')
+    #Retornar tipo da var
+    #print(type(opcao_escolhida))
+
+    #Criando uma função em py é assim:
+    #É um bloco de código que vai realizar determinada ação
+
+    if opcao_escolhida == 1:
+        print('Cadastrar Restaurante')
+    elif opcao_escolhida == 2:
+        print('Listar Restaurante')
+    elif opcao_escolhida == 3:
+        print('Ativar restaurante')
+    else:
+        finalizar_program()
+
+
+# aqui a gente está fazendo como se fosse a classe principal do programa
+#Onde tudo vai ser executado nessa linha principal que é a do main
+
+def main():
+    exibir_titulo()
+    exibir_opcoes()
+    escolher_opcao()
+
+if __name__ == '__main__':
+    main()
